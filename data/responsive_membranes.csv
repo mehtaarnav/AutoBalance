@@ -1,0 +1,2 @@
+title,doi,stimulus,metric,value,unit,response_time_s,switching_ratio,transferability,source
+An Electrochemically Redox-Responsive Ion-Imprinted Permeable Membrane for Controllable Separation of Monovalent Ions,10.1021/acsnano.5c20748,externally applied voltage,K/Li selectivity,481.2,dimensionless,,,Different ions and externally driven gate; not evidence of autonomous battery operation,https://pubmed.ncbi.nlm.nih.gov/41925149/

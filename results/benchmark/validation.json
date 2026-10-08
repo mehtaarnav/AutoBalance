@@ -1,0 +1,24 @@
+{
+  "held_out_reevaluations": 128,
+  "tight_solver_rtol": 1e-10,
+  "max_objective_absolute_difference": 2.3999479625835818e-09,
+  "nominal_replay_max_error_relative_to_initial_imbalance": 9.97179228221512e-07,
+  "replay_method": "Numerically integrate saved permeance and evaluate exact passive decay; no feedback signal",
+  "negative_controls": [
+    {
+      "name": "quiet",
+      "initial_imbalance": 0.0,
+      "disturbances": []
+    },
+    {
+      "name": "nominal_positive",
+      "initial_imbalance": 800.0,
+      "disturbances": []
+    },
+    {
+      "name": "nominal_negative",
+      "initial_imbalance": -800.0,
+      "disturbances": []
+    }
+  ]
+}

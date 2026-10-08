@@ -1,0 +1,12 @@
+{
+  "P_min_m_s": 1.0515271876237986e-07,
+  "P_max_m_s": 1.925053980653819e-05,
+  "switch_ratio": 183.07220234637805,
+  "response_tau_s": 228.22672819381177,
+  "threshold_V": 0.002881055358687986,
+  "10_to_90_transition_width_V": 0.0022124586608753835,
+  "assumed_A_B_selectivity": 12.5,
+  "hysteresis_allowance": "not modeled",
+  "cycles_required": "not established",
+  "gate_energy_J": "not established; objective uses a rate-squared proxy"
+}

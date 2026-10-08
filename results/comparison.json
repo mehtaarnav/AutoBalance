@@ -1,0 +1,57 @@
+{
+  "system": {
+    "volume_left": 0.0001,
+    "volume_right": 0.0001,
+    "area": 0.01,
+    "mean_a": 1000.0,
+    "imbalance": 800.0,
+    "horizon": 7200.0,
+    "baseline_p": 2e-06
+  },
+  "membrane": {
+    "pmin": 1.0515271876237986e-07,
+    "pmax": 1.925053980653819e-05,
+    "k": 1986.2287498114372,
+    "threshold": 0.002881055358687986,
+    "tau": 228.22672819381177
+  },
+  "static_p": 3.2005741158942115e-06,
+  "metrics": {
+    "Baseline": {
+      "objective": 0.4914348961892355,
+      "settling_s": null,
+      "settled": false,
+      "B_crossed_mol": 0.009260286590375604,
+      "imbalance_exposure": 0.17306604909149725,
+      "conservation_relative": 5.551115123125783e-16
+    },
+    "Best static": {
+      "objective": 0.45828369725300644,
+      "settling_s": 4680.0,
+      "settled": true,
+      "B_crossed_mol": 0.013876711884709812,
+      "imbalance_exposure": 0.10847984480373714,
+      "conservation_relative": 5.551115123125783e-16
+    },
+    "AutoBalance": {
+      "objective": 0.27459760303723046,
+      "settling_s": 1800.0,
+      "settled": true,
+      "B_crossed_mol": 0.010894036543644672,
+      "imbalance_exposure": 0.0389906313426416,
+      "conservation_relative": 1.1102230246251565e-15
+    }
+  },
+  "optimizer": {
+    "evaluations": 910,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded.",
+    "seed": 7
+  },
+  "improvement_percent": 40.081306692078925,
+  "eigenvalues": [
+    -3.3517415006642784e-05,
+    -0.004381607745569541
+  ],
+  "claims": "Hypothetical transport coefficients; no validated material or energetic autonomy."
+}
