@@ -2,6 +2,8 @@
 
 An open research lab asking **when a responsive membrane earns its complexity**.
 
+Current work: [testing physical feasibility against published vanadium transport data](docs/REALITY_CHECK.md). The battery-specific balance target depends on state of charge. No real membrane has yet been shown to meet the synthetic controller's requirements. We are seeking [a transport-data research partner](docs/PARTNER_TARGETS.md).
+
 AutoBalance tests concentration-driven membrane control against optimized fixed transport, a one-switch timer, and a four-stage schedule. Train on declared disturbances, freeze every policy, then evaluate events they were not tuned on. Publish the failures alongside the wins.
 
 This is a computational control hypothesis. It is not a demonstrated battery, a new membrane material, or a measured efficiency improvement.

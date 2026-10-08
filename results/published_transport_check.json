@@ -1,0 +1,33 @@
+{
+  "source_doi": "10.6084/m9.figshare.28938164",
+  "article_doi": "10.1038/s41467-026-70872-8",
+  "source_sha256": "1f9bd80966ceee2159e1aa77fabc24a468be03ab9f26f8d7b2707f1912e6c72d",
+  "table": "Fig. 2a!A1:U39",
+  "data_type": "Published computed flux ratios, not experimental gate measurements",
+  "values_compared": 760,
+  "author_script_max_absolute_discrepancy": 0.03340480324350015,
+  "author_script_rmse": 0.008608247611430087,
+  "supplement_coefficients_max_absolute_discrepancy": 0.013681848147087727,
+  "verdict": "Released script does not reproduce the table to its five-decimal precision; clarification needed",
+  "balance_concentration_ratio_at_soc_0_50_100": [
+    0.4707317073170732,
+    0.9410994764397905,
+    1.4858757062146892
+  ],
+  "experimental_concentrations": {
+    "source_cells": "Fig. 2e!B2:F5",
+    "initial_negative_M": 1.7,
+    "initial_positive_M": 1.7,
+    "final_negative_M": 1.17,
+    "final_positive_M": 1.91,
+    "time_h_as_tabulated": 107,
+    "limitation": "End-state measurements alone cannot identify permeance; volumes and redox reactions matter"
+  },
+  "current_hypothetical_candidate": {
+    "switch_ratio": 193.4784995687227,
+    "threshold_mV": 7.323737895712772,
+    "transition_10_to_90_width_mV": 2.20483115521185,
+    "tau_s": 100,
+    "status": "Candidate specification, not demonstrated material performance or a proven minimum requirement"
+  }
+}

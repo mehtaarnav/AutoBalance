@@ -1,0 +1,90 @@
+clear all
+close all
+clc
+
+%% permeability of vanadium ions
+P2=5.26*10^-7;
+P3=1.93*10^-7;
+P4=4.10*10^-7;
+P5=3.54*10^-7;
+SOC=[0.05:0.05:1];
+%% positive and negative have the same concentration and SOC
+C_p=[0.5:0.05:2];% catholyte concentration
+C_n=[0.5:0.05:2];% Anolyte concentration
+L=length(C_p);
+for i=1:L
+V45=C_p(i)*(P4*(1-SOC)+P5*SOC);
+V23=C_n(i)*(P3*(1-SOC)+P2*SOC);
+V_PN(i,:)=V45./V23;
+end
+plot(SOC,V_PN,'-*')
+xlabel('SOC')
+ylabel('Transport volocity ratio')
+figure
+plot(C_p,V_PN,'-s')
+xlabel('Concentration/mol.L')
+figure
+
+%% positive and negative have the same concentration but different SOC
+
+V45s=(P4*(1-SOC)+P5*SOC)';% overall vanadium ions transport volocity on positive side
+V23s=(P3*(1-SOC)+P2*SOC);% overall vanadium ions transport volocity on Negative side
+V_PNs=V45s./V23s;
+
+surf(V_PNs);
+ylabel('SOC on negative side');
+xlabel('SOC on positive  side');
+zlabel('Transport volocity ratio');
+title('PN have same concentration under different SOC');
+grid on;
+
+figure
+
+
+%% positive and negative have different concentrations
+
+for j=1:length(SOC)
+
+V45m=(C_p*(P4*(1-SOC(j))+P5*SOC(j)))';% overall vanadium ions transport volocity on positive side
+V23m=C_n*(P3*(1-SOC(j))+P2*SOC(j));
+
+V_PNm=V45m./V23m;% convert to matrix
+
+[r,c]=find(abs(V_PNm-1)<=0.001);
+va(:,j)= {V_PNm(sub2ind(size(V_PNm), r, c))};
+
+C_pr(j,:)={C_p(r)};% cathoulyte concentration with samll transfer difference
+C_nr(j,:)={C_p(c)};
+
+end
+surf(V_PNm);
+ylabel('Concentration/mol.L');
+xlabel('SOC');
+zlabel('Transport volocity ratio');
+title('Positive to negative');
+grid on;
+figure
+
+%% calculate with differnet PN concnetration ratio and based on this to calculate the crossover ratio under differnt SOC
+PN_r=[0.25:0.1:4];% the concnetration ratio between positive and negative sides
+for k=1:length(SOC)
+
+V45k=(PN_r*(P4*(1-SOC(k))+P5*SOC(k)))';
+V23k=(P3*(1-SOC(k))+P2*SOC(k));
+
+V_PNk(:,k)=V45k/V23k;% convert to matrix
+
+
+end
+
+plot(PN_r,V_PNk,'-*')
+xlabel('PN concentration ratio')
+ylabel('Transport volocity ratio')
+
+figure
+%% different concentration on positive and negative side
+VC_PN=(P3*(1-SOC)+P2*SOC)./(P4*(1-SOC)+P5*SOC);
+plot(SOC,VC_PN,'-*')
+xlabel('SOC')
+ylabel('Concentration ratio between positive and negative sides')
+
